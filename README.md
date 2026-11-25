@@ -1,8 +1,6 @@
 
 <div align="center">
 
-<img src="assets/flowscale-banner.svg" alt="FlowScale — menos atrito no almoço, mais inteligência no atendimento" width="100%" />
-
 # FlowScale
 
 ### Tecnologia para uma jornada de almoço executivo mais fluida, inteligente e conectada.
