@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">FlowScale — tecnologia para o almoço executivo</title>
+<desc id="desc">Banner do projeto FlowScale para o Hackathon Bovinu's Augusta 2026.</desc>
+<defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#0b1725"/><stop offset="55%" stop-color="#122a39"/><stop offset="100%" stop-color="#113b41"/></linearGradient>
+<linearGradient id="line" x1="0" x2="1"><stop offset="0%" stop-color="#57debc" stop-opacity=".05"/><stop offset="60%" stop-color="#50d5b5" stop-opacity=".85"/><stop offset="100%" stop-color="#f6af68" stop-opacity=".8"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="1200" height="320" rx="28" fill="url(#bg)"/>
+<g opacity=".17" stroke="#7bc5c2" stroke-width="1"><path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200"/><path d="M80 0V320M180 0V320M280 0V320M380 0V320M480 0V320M580 0V320M680 0V320M780 0V320M880 0V320M980 0V320M1080 0V320"/></g>
+<circle cx="1030" cy="80" r="90" fill="#2fbcac" opacity=".20" filter="url(#glow)"/>
+<path d="M730 246 C815 240 795 102 900 144 S980 250 1041 181 S1096 90 1190 77" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+<g fill="#0d2932" stroke="#6be6c0" stroke-width="5"><circle cx="900" cy="144" r="14"/><circle cx="1041" cy="181" r="14"/></g>
+<rect x="70" y="54" width="128" height="32" rx="16" fill="#183f45" stroke="#2e8f87"/><text x="134" y="75" text-anchor="middle" fill="#9debd8" font-size="15" font-family="Arial,sans-serif" font-weight="700">HACKATHON 2026</text>
+<text x="67" y="167" font-family="Arial, Helvetica, sans-serif" font-size="77" letter-spacing="-3" font-weight="750" fill="#f8fafc">Flow<tspan fill="#60d6b3">Scale</tspan></text>
+<text x="72" y="213" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#d8e8ee">Menos atrito no almoço. Mais inteligência no atendimento.</text>
+<text x="73" y="261" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing="1.6" fill="#9fc0c6">SOLUÇÃO DESENVOLVIDA PARA A BOVINU’S AUGUSTA</text>
+</svg>
