@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e9e5df">
+  <title>Bovinus | Balança e prato em 3D</title>
+  <style>
+    :root{--burgundy:#79392e;--ink:#322b25;--line:#d9d2c7;--sand:#e9e5df;--ivory:#f8f6f2}
+    *{box-sizing:border-box}body{margin:0;background:var(--sand);font:14px/1.5 system-ui,Segoe UI,sans-serif;color:var(--ink);overflow:hidden}
+    #viewport{position:relative;inset:0;height:100dvh;min-height:470px;background:radial-gradient(ellipse at 52% 41%,#fbfaf7 0%,#ede8e0 57%,#d6cfc4 100%);overflow:hidden}
+    #model{width:100%;height:100%;display:block;cursor:grab;touch-action:none;outline:none}#model:active{cursor:grabbing}
+    .topbar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px clamp(16px,4vw,56px);z-index:5;pointer-events:none}
+    .brand{display:flex;align-items:center;gap:13px}.mark{width:35px;height:35px;display:grid;place-items:center;background:var(--burgundy);color:#ffefce;border-radius:11px;font:700 24px Georgia,serif;box-shadow:0 3px 10px #67281c22}
+    .name{font:600 23px Georgia,serif;letter-spacing:-.35px}.sub{font-size:11px;color:#7a6e63;letter-spacing:.10em;text-transform:uppercase;margin-top:1px}
+    .views{display:flex;align-items:center;gap:6px;flex-wrap:wrap;pointer-events:auto}.views button,.action{font:650 12px system-ui,Segoe UI,sans-serif;padding:9px 13px;border-radius:9px;border:1px solid #d8ccbf;background:#ffffffda;color:#5b473d;cursor:pointer;box-shadow:0 2px 5px #5d403115}
+    .views button:hover,.action:hover{background:white;border-color:#b8a798}.views button.active{color:#fff;background:var(--burgundy);border-color:var(--burgundy)}
+    .intro{position:absolute;left:clamp(17px,4vw,58px);bottom:clamp(28px,6vh,72px);pointer-events:none;z-index:3;max-width:280px}.eyebrow{font-size:10px;color:#9b604a;letter-spacing:.17em;font-weight:800;text-transform:uppercase}.intro h1{font:600 clamp(22px,3vw,35px)/1.08 Georgia,serif;margin:9px 0;color:#352b25}.intro p{font-size:12px;line-height:1.65;color:#756960;margin:0}
+    .bottom{position:absolute;bottom:23px;right:clamp(18px,4vw,56px);z-index:4;display:flex;gap:10px;align-items:center}.zoom{background:#fffcf9de;border:1px solid #ded3c7;padding:7px 13px;border-radius:40px;display:flex;align-items:center;gap:9px;color:#776b60;font-size:11px}.zoom input{accent-color:var(--burgundy);width:100px}
+    .loading,.error{display:none;position:absolute;top:55%;left:50%;transform:translate(-50%,-50%);z-index:8;text-align:center;padding:26px 28px;max-width:320px;background:#fffef5;border:1px solid #e4d7ca;border-radius:15px;color:#6c5f54}
+    .hint{font-size:11px;color:#8c7f70;letter-spacing:.01em}.dot{height:6px;width:6px;border-radius:50%;background:var(--burgundy);display:inline-block;vertical-align:middle;margin:0 6px}
+    @media(max-width:680px){.topbar{padding:13px 12px;align-items:flex-start}.brand{gap:8px}.mark{width:30px;height:30px;font-size:21px}.name{font-size:18px}.sub{font-size:9px}.views{justify-content:flex-end;max-width:250px}.views button{padding:7px 8px;font-size:10px}.intro{bottom:105px;max-width:190px}.intro p{display:none}.bottom{right:12px;bottom:14px}.hint{display:none}.zoom{padding:6px 9px}.zoom input{width:72px}}
+  </style>
+</head>
+<body>
+  <main id="viewport">
+    <canvas id="model" role="img" aria-label="Modelo tridimensional interativo de balança profissional com prato de comida, câmera integrada e pedestal" tabindex="0"></canvas>
+    <div class="topbar">
+      <div class="brand"><span class="mark">B</span><div><div class="name">Bovinus</div><div class="sub">Balança inteligente · Conceito 3D</div></div></div>
+      <nav class="views" aria-label="Ângulos de visualização"><button id="angle" class="active">Vista 3/4</button><button id="front">Frente</button><button id="top">Ver o prato</button><button id="back">Traseira</button><button id="spin">Girar</button><button id="reset">↺</button></nav>
+    </div>
+    
+    <div class="bottom"><span class="hint">Arraste para girar <i class="dot"></i> role para aproximar</span><label class="zoom" for="zoom">Zoom <input id="zoom" aria-label="Aproximar modelo" type="range" min="55" max="160" value="100"></label></div>
+    <div class="error" id="error">Seu navegador não conseguiu iniciar o modelo WebGL. Experimente Chrome ou Edge atualizado, com aceleração de hardware habilitada.</div>
+  </main>
+  <script src="modelo3d.js"></script>
+</body>
+</html>
