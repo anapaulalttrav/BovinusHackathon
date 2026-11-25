@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bovinus · Escolha sua carne</title><style>
+:root{--bg:#fcfaf5;--text:#27241e;--muted:#787268;--red:#9b3323;--red2:#6f281c;--gold:#e9b653;--green:#216a4a;--line:#e9e1d6;--light:#f6f2ec}*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);background:var(--bg)}button,input{font:inherit}button{cursor:pointer}header{background:var(--red2);color:white;padding:15px 20px}header .inner{max-width:700px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}header b{font-size:23px;letter-spacing:-1px}.tag{border:1px solid #ffffff55;border-radius:20px;padding:5px 10px;font-size:11px;white-space:nowrap}.wrap{max-width:700px;margin:0 auto;padding:25px 16px 70px}.eyebrow{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--red);font-weight:800}.intro h1{font-size:clamp(28px,6vw,40px);letter-spacing:-1.2px;line-height:1.15;margin:6px 0 10px}.intro p{color:var(--muted);margin:0 0 20px}.note{background:#fff5e1;border:1px solid #f0d6a2;border-radius:12px;padding:13px 15px;font-size:13px;color:#6e552d;margin:18px 0}.card{border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 6px 25px #2b190e09;padding:20px;margin:18px 0}.card h2{font-size:20px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.meat{background:#faf8f5;border:2px solid #e7ddd2;border-radius:13px;min-height:91px;padding:14px;text-align:left;color:#332a24}.meat strong{display:block;font-size:15px;margin-bottom:6px}.meat small{font-size:12px;color:var(--muted)}.meat.selected{background:#fff4e9;border-color:var(--red)}.selected-list{display:grid;gap:10px;margin-top:12px}.selected-row{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding:13px 12px;border:1px solid #e9daca;border-radius:10px;background:#fffaf2}.selected-row b{font-size:15px}.selected-row label{font-size:12px;font-weight:700}.selected-row select{width:100%;max-width:190px;padding:8px;border:1px solid #d8cabb;border-radius:7px;background:white}.selected-controls{display:flex;gap:5px;align-items:center}.selected-controls button{border:1px solid #d8cabb;background:#fff;padding:5px 12px;border-radius:7px;font-size:17px}.selected-controls span{min-width:23px;text-align:center;font-weight:800}.selected-count{font-weight:800;font-size:13px;color:var(--red)}.meat:disabled{opacity:.45;cursor:not-allowed}.radios{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.radio{border:1px solid #ded7cb;background:#fff;padding:12px 10px;border-radius:10px;font-size:13px;font-weight:700}.radio.selected{background:#f6e6da;border-color:var(--red);color:var(--red)}.bigbutton{background:var(--red);color:#fff;padding:16px;border:0;border-radius:11px;width:100%;font-weight:800;font-size:15px;margin-top:20px}.bigbutton:disabled{opacity:.5;cursor:not-allowed}.statusline{padding:17px;background:#f3f8f4;border-radius:12px;border:1px solid #cce2d3;color:#1e5f41;font-size:15px;font-weight:700}.statusline.ready{background:#e6f4e8;color:#0d653a;border:2px solid #399962;font-size:18px}.statusline.cancel{background:#f9e8e6;color:#8d3328}.ticket{margin:20px 0;padding:23px;text-align:center;border:2px dashed var(--red);border-radius:17px;background:#fffaf4}.ticket small{color:var(--muted);font-size:12px}.ticket strong{display:block;font-size:35px;letter-spacing:2px;color:var(--red)}.progress{display:flex;justify-content:space-between;gap:7px;margin:20px 0}.step{flex:1;background:#efede9;border-radius:7px;padding:8px 4px;font-size:11px;text-align:center;color:#7a756d}.step.active{background:#f7dfba;color:#7c381a;font-weight:800}.step.done{background:#d7eadc;color:#175f3f;font-weight:700}.detail{font-size:14px;color:#5e554f}.smallbtn{background:#fff;border:1px solid #d8cec3;padding:11px 13px;border-radius:10px;color:#5a5047;font-weight:700}.footer{font-size:12px;color:#8f897f;text-align:center;margin-top:28px}.error{color:#b1352b;font-size:13px;margin-top:12px}.hidden{display:none!important}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}#sync{font-size:11px;color:#827a72}@media(max-width:450px){.wrap{padding:19px 12px 50px}.card{padding:16px}.grid{gap:8px}.meat{padding:11px;min-height:86px}.ticket strong{font-size:30px}}
+</style></head><body>
+<header><div class="inner"><b>Bovinus</b><span class="tag">UNIDADE AUGUSTA · CHURRASQUEIRA</span></div></header>
+<main class="wrap">
+<section class="intro"><div class="eyebrow">Mais tempo para aproveitar seu almoço</div><h1>Escolha sua carne antes de chegar à churrasqueira.</h1><p>Informe o número do seu cartão consumo e indique sua preferência. Enquanto monta o prato no buffet, o balcão visualiza sua seleção. A cozinha e o preparo seguem exatamente como hoje.</p></section>
+<div class="note"><b>Protótipo do Hackathon.</b> Esta é uma pré-seleção para organizar a retirada dos cortes já servidos normalmente. <b>Não envia ordens para a cozinha</b>, não reserva carne nem muda a produção. A retirada depende da disponibilidade real e confirmação do balcão.</div>
+<div id="orderForm" class="card"><label for="numeroComanda" style="display:block;font-size:14px;font-weight:800;margin-bottom:6px">Número do cartão consumo (comanda)</label><input id="numeroComanda" inputmode="numeric" maxlength="6" pattern="[0-9]{4,6}" placeholder="Ex.: 1579" style="width:100%;padding:13px;border:1px solid #ded7cb;border-radius:10px;font-size:20px;margin-bottom:18px"><div class="row"><h2>Escolha suas carnes</h2><span id="sync"></span></div><p class="sub">Escolha até <b>5 tipos de carne</b> na mesma comanda. Toque novamente para remover. Até 3 porções por tipo e 10 porções no total. Cortes ilustrativos: a equipe define quais estão disponíveis.</p><div class="grid" id="cuts"><p>Carregando opções...</p></div>
+<h2 style="font-size:17px;margin-top:23px">Sua seleção <span id="selectedCount" class="selected-count">0 cortes</span></h2><p class="sub">Selecione o ponto e a quantidade de cada carne. A preferência está sujeita à disponibilidade do atendimento normal.</p><div class="selected-list" id="selectedList"><p class="sub">Selecione uma ou mais carnes acima.</p></div><button id="submit" class="bigbutton" disabled>Confirmar carnes da comanda</button><div id="formError" class="error" role="alert"></div></div>
+<div id="orderStatus" class="card hidden" aria-live="polite"><div class="row"><h2>Acompanhe seu pedido</h2><span id="updated" style="font-size:11px;color:#827a72">Atualizando...</span></div><div class="ticket"><small>APRESENTE SUA COMANDA NA CHURRASQUEIRA</small><strong id="code">—</strong><span class="detail" id="choice"></span><p class="detail" id="orderReference"></p></div><div class="statusline" id="state">Pedido recebido</div><div class="progress" id="progress"></div><p id="message" class="detail"></p><p id="elapsed" class="detail"></p><div class="row" style="margin-top:17px"><button class="smallbtn hidden" id="cancel">Cancelar solicitação</button><button class="smallbtn hidden" id="newOrder">Fazer outro pedido</button></div><div id="statusError" class="error"></div></div>
+<p class="footer">Bovinus · Pedido antecipado de churrasqueira · Os cortes e tempos da demonstração não são dados reais da unidade.</p></main>
+<script>
+const API='/api/churrasqueira';
+let catalog=[],selected=new Map(),currentCode=localStorage.getItem('bovinus_grill_code'),lastOrder=null;
+let customerId=localStorage.getItem('bovinus_grill_client');
+if(!customerId){customerId=(globalThis.crypto?.randomUUID?.()||String(Math.random()).replace('.','')+'0123456789abcdef').replace(/-/g,'');localStorage.setItem('bovinus_grill_client',customerId)}
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const points=['Ponto da casa','Malpassada','Ao ponto','Bem-passada'];
+function renderCuts(){
+  $('cuts').innerHTML=catalog.map(c=>`<button type="button" class="meat ${selected.has(c.id)?'selected':''}" data-cut="${esc(c.id)}" aria-pressed="${selected.has(c.id)}" ${!c.disponivel?'disabled':''}><strong>${selected.has(c.id)?'✓ ':''}${esc(c.nome)}</strong><small>${c.disponivel?'Selecionar/remover':'Indisponível no momento'}</small></button>`).join('');
+  if(!catalog.length)$('cuts').innerHTML='<p>Nenhum corte disponível no momento.</p>';
+}
+function renderSelection(){
+  const valid=selected.size>0&&selected.size<=5&&[...selected.values()].reduce((n,x)=>n+x.quantidade,0)<=10;
+  $('selectedCount').textContent=selected.size+' '+(selected.size===1?'tipo':'tipos');
+  $('submit').disabled=!valid;
+  $('selectedList').innerHTML=[...selected].map(([id,item])=>{
+    const name=catalog.find(c=>c.id===id)?.nome||id;
+    const choices=points.map(point=>`<option value="${esc(point)}" ${point===item.ponto?'selected':''}>${esc(point)}</option>`).join('');
+    return `<div class="selected-row"><div><b>${esc(name)}</b><div class="selected-controls"><button type="button" data-minus="${esc(id)}" aria-label="Menos porções de ${esc(name)}">−</button><span>${item.quantidade}</span><button type="button" data-plus="${esc(id)}" aria-label="Mais porções de ${esc(name)}">+</button></div></div><label>Ponto da carne<br><select data-point-cut="${esc(id)}">${choices}</select></label><button type="button" class="smallbtn" data-remove="${esc(id)}">Remover</button></div>`;
+  }).join('')||'<p class="sub">Selecione uma ou mais carnes acima.</p>';
+  renderCuts();
+}
+async function loadCuts(){
+  if(currentCode)return;
+  try{
+    const r=await fetch(API+'/cortes',{cache:'no-store'});
+    if(!r.ok)throw Error('Não foi possível consultar os cortes.');
+    const data=await r.json();catalog=data.cortes||[];
+    for(const id of selected.keys())if(!catalog.some(c=>c.id===id&&c.disponivel))selected.delete(id);
+    $('sync').textContent='Disponibilidade atualizada';
+    renderSelection();
+  }catch(err){$('formError').textContent=err.message}
+}
+$('cuts').addEventListener('click',e=>{
+  const btn=e.target.closest('[data-cut]');if(!btn||btn.disabled)return;
+  const id=btn.dataset.cut;
+  if(selected.has(id))selected.delete(id);
+  else if(selected.size>=5){$('formError').textContent='Limite de 5 tipos de carne por comanda.';return}
+  else selected.set(id,{ponto:'Ponto da casa',quantidade:1});
+  $('formError').textContent='';renderSelection();
+});
+$('selectedList').addEventListener('change',e=>{
+  const sel=e.target.closest('[data-point-cut]');
+  if(sel&&selected.has(sel.dataset.pointCut)){selected.get(sel.dataset.pointCut).ponto=sel.value}
+});
+$('selectedList').addEventListener('click',e=>{
+  const btn=e.target.closest('[data-remove],[data-plus],[data-minus]');if(!btn)return;
+  const id=btn.dataset.remove||btn.dataset.plus||btn.dataset.minus;
+  if(!selected.has(id))return;
+  const item=selected.get(id);
+  if(btn.hasAttribute('data-remove'))selected.delete(id);
+  else if(btn.hasAttribute('data-plus')){
+    const total=[...selected.values()].reduce((n,v)=>n+v.quantidade,0);
+    if(item.quantidade>=3||total>=10){$('formError').textContent='Máximo de 3 porções por carne e 10 por pedido.';return}
+    item.quantidade++;
+  }else if(item.quantidade>1)item.quantidade--;
+  else selected.delete(id);
+  $('formError').textContent='';renderSelection();
+});
+$('submit').onclick=async()=>{
+  if(selected.size===0)return;
+  const numeroComanda=$('numeroComanda').value.trim();
+  if(!/^\d{4,6}$/.test(numeroComanda)){$('formError').textContent='Informe os 4 a 6 dígitos impressos no cartão consumo.';return}
+  $('submit').disabled=true;$('formError').textContent='';
+  try{
+    const itens=[...selected].map(([corte_id,item])=>({corte_id,ponto:item.ponto,quantidade:item.quantidade}));
+    const r=await fetch(API+'/pedidos',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cliente_id:customerId,numero_comanda:numeroComanda,itens})});
+    const obj=await r.json();
+    if(r.status===409&&obj.detail?.codigo)currentCode=obj.detail.codigo;
+    else if(!r.ok)throw Error(typeof obj.detail==='string'?obj.detail:'Não foi possível enviar o pedido.');
+    else currentCode=obj.codigo;
+    localStorage.setItem('bovinus_grill_code',currentCode);await getOrder();
+  }catch(e){$('formError').textContent=e.message;$('submit').disabled=false}
+};
+async function getOrder(){
+  if(!currentCode)return;
+  try{
+    const response=await fetch(API+'/pedidos/'+encodeURIComponent(currentCode),{cache:'no-store'});
+    if(!response.ok)throw Error('Pedido não encontrado. Se necessário, reinicie a seleção.');
+    const obj=await response.json();lastOrder=obj;renderOrder(obj);$('statusError').textContent='';
+  }catch(e){$('statusError').textContent=e.message;$('orderForm').classList.add('hidden');$('orderStatus').classList.remove('hidden');$('newOrder').classList.remove('hidden')}
+}
+const states={solicitado:'Suas preferências chegaram ao balcão',preparando:'Solicitação em atendimento no balcão',pronto:'Cortes disponíveis para retirada',entregue:'Solicitação atendida. Bom almoço!',cancelado:'Solicitação cancelada'};
+const advice={solicitado:'Continue se servindo. Sua solicitação não altera a produção normal das carnes.',preparando:'A equipe está conferindo os cortes disponíveis no serviço normal.',pronto:'Dirija-se ao balcão com seu cartão consumo. A equipe confirmará a entrega de todos os itens.',entregue:'Você pode realizar outra seleção quando desejar.',cancelado:'Você pode selecionar outros cortes.'};
+const orderSteps=['solicitado','preparando','pronto','entregue'];
+function renderOrder(o){
+  $('orderForm').classList.add('hidden');$('orderStatus').classList.remove('hidden');
+  $('code').textContent=o.numero_comanda||'—';$('orderReference').textContent='Referência digital: '+o.codigo;
+  const items=o.itens?.length?o.itens:[{corte_nome:o.corte_nome,ponto:o.ponto,quantidade:1}];
+  $('choice').innerHTML=items.map(x=>`${x.quantidade}× ${esc(x.corte_nome)} · ${esc(x.ponto)}`).join('<br>');
+  $('state').textContent=states[o.status]||o.status;
+  $('state').className='statusline'+(o.status==='pronto'?' ready':o.status==='cancelado'?' cancel':'');
+  $('message').textContent=advice[o.status]||'';
+  $('cancel').classList.toggle('hidden',o.status!=='solicitado');
+  $('newOrder').classList.toggle('hidden',!['entregue','cancelado'].includes(o.status));
+  const pos=orderSteps.indexOf(o.status);
+  $('progress').innerHTML=orderSteps.map((step,i)=>`<span class="step ${o.status==='cancelado'?'':i<pos?'done':i===pos?'active':''}">${({solicitado:'Recebido',preparando:'Em atendimento',pronto:'Disponível',entregue:'Retirado'})[step]}</span>`).join('');
+  $('updated').textContent='Atualizado agora';updateElapsed();
+}
+function updateElapsed(){if(!lastOrder)return;const s=Math.max(0,Math.floor((Date.now()-new Date(lastOrder.criado_em).getTime())/1000));$('elapsed').textContent='Tempo desde a solicitação: '+Math.floor(s/60)+'min '+String(s%60).padStart(2,'0')+'s (não é tempo de espera presencial)'}
+$('cancel').onclick=async()=>{if(!confirm('Cancelar sua seleção?'))return;const r=await fetch(API+'/pedidos/'+encodeURIComponent(currentCode)+'/cancelar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cliente_id:customerId})});if(r.ok)getOrder();else{$('statusError').textContent='Não foi possível cancelar. O atendimento pode já ter sido iniciado.';getOrder()}};
+$('newOrder').onclick=()=>{currentCode=null;lastOrder=null;selected.clear();localStorage.removeItem('bovinus_grill_code');$('orderForm').classList.remove('hidden');$('orderStatus').classList.add('hidden');$('formError').textContent='';loadCuts()};
+if(currentCode)getOrder();else loadCuts();
+setInterval(()=>{if(currentCode)getOrder();else loadCuts()},3000);setInterval(updateElapsed,1000);
+</script></body></html>
