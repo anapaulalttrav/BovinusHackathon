@@ -70,6 +70,8 @@ Precisa localizar um funcionário para pedidos simples
 
 Em um **almoço executivo**, o cliente valoriza a variedade e a qualidade, mas também precisa de **previsibilidade, praticidade e agilidade**. Nosso projeto se concentra justamente nos pontos de contato com o serviço.
 
+### Link video: https://drive.google.com/drive/folders/1ivbTPbcOT-e-wBgJe1AQuSCs7uo1cKRb?usp=sharing
+
 ### O que está dentro — e fora — do escopo
 
 | ✅ Dentro do escopo | 🚫 Fora do escopo |
