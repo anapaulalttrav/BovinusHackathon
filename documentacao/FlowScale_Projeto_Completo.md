@@ -89,7 +89,7 @@ O desenvolvimento ocorreu de forma incremental: **levantamento → formulação 
 Foi criada uma aplicação web inicial para demonstrar:
 
 - **SmartScale:** análise visual opcional de foto do prato, classificação aproximada por categorias de alimento e estimativa de custos.
-- **SmartQueue:** registro manual de duração de filas e atendimento, com indicadores estatísticos.
+- **SmartCam:** registro manual de duração de filas e atendimento, com indicadores estatísticos.
 - **Painel gerencial:** apresentação de informações e exportação de dados para análise.
 
 As rotinas de exemplo permitiram demonstrar conceitos mesmo sem dados históricos ou dispositivos instalados na unidade. Dados inseridos por simulação receberam identificação própria.
