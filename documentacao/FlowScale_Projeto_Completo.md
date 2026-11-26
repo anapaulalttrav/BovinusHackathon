@@ -173,7 +173,7 @@ flowchart TD
     A --> G[Cliente na mesa]
     G --> H[Tablet 3D: atendimento, bebidas e feedback]
     H --> I[Painel da equipe de salão]
-    J[Vídeo ou câmera de estudo] --> K[SmartQueue Cam: análise do fluxo]
+    J[Vídeo ou câmera de estudo] --> K[Smart Cam: análise do fluxo]
     L[Dados hipotéticos e parâmetros] --> M[Simulador de pico, cubas e maquete]
 ```
 
