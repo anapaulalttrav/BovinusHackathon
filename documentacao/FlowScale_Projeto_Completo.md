@@ -13,7 +13,7 @@
 
 O **FlowScale** é uma solução tecnológica concebida para apoiar a melhoria da jornada do cliente no almoço da **Bovinu's Augusta**, com foco em quatro necessidades: **organização do atendimento na churrasqueira, análise do fluxo de pessoas, visibilidade sobre a composição e o custo dos pratos e agilidade na comunicação entre mesas e equipe de salão**.
 
-O trabalho partiu do estudo do desafio do restaurante, das observações apresentadas pela empresa, de referências do espaço físico e da análise do funcionamento da jornada do cliente. Em seguida, o grupo criou protótipos demonstráveis, com interfaces, regras de negócio, painéis de equipe, experiências em 3D e mecanismos de análise de dados.
+O trabalho partiu do estudo do desafio do restaurante, das observações apresentadas pela empresa, de referências do espaço físico e da análise do funcionamento da jornada do cliente. Em seguida, nosso grupo criou protótipos demonstráveis, com interfaces, regras de negócio, painéis de equipe, experiências em 3D e mecanismos de análise de dados.
 
 ### Principais entregas
 
