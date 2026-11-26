@@ -125,7 +125,7 @@ O SmartQueue Cam foi criado por meio de uma abordagem de **visão computacional 
 
 **Teste de desenvolvimento:** em um vídeo de aproximadamente um minuto, `yolov8s` com análise em `960px` identificou **1 a 4 pessoas** na área. A espera de **30 a 120 segundos** foi uma estimativa calculada com vazão **assumida** de 2 clientes/minuto. **Não são medições da operação da Bovinu's.**
 
-> 📁 O material disponível neste repositório inclui o **resumo técnico da câmera**. Os arquivos executáveis `camera_queue.py` e `requirements_cam.txt` pertencem ao projeto original de análise e **precisam ser adicionados separadamente** para rodar essa frente. Veja [`analise-fluxo/SmartQueue_Cam_Resumo.md`](analise-fluxo/SmartQueue_Cam_Resumo.md).
+> 📁 O material disponível neste repositório inclui o **resumo técnico da câmera**. Os arquivos executáveis `camera_queue.py` e `requirements_cam.txt` pertencem ao projeto original de análise e **precisam ser adicionados separadamente** para rodar essa frente. Veja [`Bovinus_SmartFlow_MVP/files/README_cam.md`](Bovinus_SmartFlow_MVP/files/README_cam.md).
 
 ### ⚖️ 03 — SmartScale: balança inteligente e estudo do CMV
 
@@ -289,42 +289,49 @@ Essa comunicação de ponta a ponta foi central nos testes, especialmente nas ve
 
 ---
 
-## 📂 Estrutura do repositório
+## 📂 Estrutura real do repositório
+
+Os caminhos abaixo refletem os arquivos publicados na branch `main` do GitHub:
 
 ```text
-FlowScale/
-├── README.md                       # Você está aqui
-├── .gitignore                      # Dados locais e credenciais não versionados
-├── assets/                         # Banner e capturas do projeto
+BovinusHackathon/
+├── README.md
+├── Bovinus/                              # Sistema principal, QR Code e simulador
+│   ├── app.py
+│   ├── grill.py
+│   ├── requirements.txt
+│   ├── churrasqueira_cliente.html
+│   ├── churrasqueira_painel.html
+│   ├── churrasqueira_qr.html
+│   └── simulador.html
+├── tablet-3d/                            # Tablet 3D e painel do salão
+│   ├── app.py
+│   ├── salao.py
+│   ├── requirements.txt
+│   └── tablet_3d_real.js
+├── balanca-ia/                           # Webcam, análise visual, CMV e painel
+│   ├── app.py
+│   ├── requirements.txt
+│   └── balanca3d.js
+├── Bovinus_Balanca_e_Prato_3D/          # Visualizador e modelo 3D independente
+│   ├── index.html
+│   ├── modelo3d.js
+│   └── Bovinus_Balanca_e_Prato_3D.glb
+├── Bovinus_SmartFlow_MVP/
+│   └── files/                           # SmartQueue Cam: YOLO, calibração e CSV
+│       ├── camera_queue.py
+│       ├── requirements_cam.txt
+│       ├── README_cam.md
+│       └── zones.json
 ├── documentacao/
 │   └── FlowScale_Projeto_Completo.md
-├── modulos/
-│   ├── nucleo-web/                 # MVP, QR Code, churrasqueira e simulador
-│   │   ├── app.py
-│   │   ├── grill.py
-│   │   ├── requirements.txt
-│   │   ├── churrasqueira_cliente.html
-│   │   ├── churrasqueira_painel.html
-│   │   └── simulador.html
-│   ├── tablet-3d/                  # Tablet, backend do salão e painel
-│   │   ├── app.py
-│   │   ├── salao.py
-│   │   ├── requirements.txt
-│   │   └── tablet_3d_real.js
-│   ├── balanca-ia/                 # Webcam, análise, CMV e dashboard
-│   │   ├── app.py
-│   │   ├── balanca3d.js
-│   │   ├── requirements.txt
-│   │   └── painel.html
-│   └── balanca-prato-3d/           # Modelo visual final e prato 3D
-│       ├── index.html
-│       ├── modelo3d.js
-│       └── Bovinus_Balanca_e_Prato_3D.glb
-└── analise-fluxo/
-    └── SmartQueue_Cam_Resumo.md    # Registro da análise; código original à parte
+├── assets/                               # Capturas de tela para o README
+├── videoApresentação/
+│   └── Apresentacaovideo.mp4
+└── FlowScale_Hackathon.pptx
 ```
 
-> **Nota de nomenclatura:** os módulos foram criados em etapas e conservam nomes históricos como `Bovinus` em classes, páginas e arquivos. **Bovinu's é o restaurante**; **FlowScale é o nome da solução.** Não renomeamos automaticamente o código para não comprometer caminhos e funcionalidades já testados.
+> Os nomes internos preservam “Bovinus”, marca do restaurante. **FlowScale** é o nome final do projeto. Os módulos são independentes; **não** execute `uvicorn app:app` na raiz do repositório.
 
 ---
 
@@ -332,155 +339,147 @@ FlowScale/
 
 ### Pré-requisitos
 
-- **Windows 10/11** com **Python 3.10+**, instalado e acessível pelo terminal;
-- **VS Code**, com a extensão Python recomendada;
-- **Chrome ou Edge** atualizado;
-- Internet apenas para instalar pacotes e, se utilizada, acessar a API de análise visual;
-- Webcam opcional para a balança; para a câmera de filas, é preciso dispor do **código original e do vídeo/câmera** da análise.
+- Windows 10/11, Python 3.10+ e VS Code (extensão Python recomendada);
+- Chrome ou Edge atualizado;
+- Acesso à internet para instalar dependências;
+- Webcam somente para as funções que usam câmera.
 
-> ✅ Execute os comandos **dentro da pasta do módulo** onde está o `app.py` e o `requirements.txt`. Não execute `uvicorn app:app` na raiz do repositório. Abra **um terminal por módulo** e deixe cada servidor aberto.
+**Abra a pasta `BovinusHackathon` no VS Code.** Para evitar erros, abra um terminal novo para cada módulo, começando sempre na raiz do repositório. Execute cada comando separadamente e **deixe os servidores ativos** enquanto utiliza as páginas.
 
-### 1. Clonar ou baixar
+### 1. Baixar o código
+
+No PowerShell:
 
 ```powershell
-# Caso já exista um repositório remoto configurado:
-git clone URL_DO_SEU_REPOSITORIO
-cd FlowScale
-
-# Se você baixou o ZIP, basta extrair e abrir a pasta FlowScale no VS Code.
+git clone https://github.com/anapaulalttrav/BovinusHackathon.git
+cd BovinusHackathon
 ```
 
-**Substitua `URL_DO_SEU_REPOSITORIO` pelo endereço real após publicar no GitHub.** Nenhum endereço de repositório foi presumido neste documento.
+Alternativa: clique em **Code → Download ZIP** no GitHub, extraia e abra a pasta extraída no VS Code. Neste caso, não precisa executar `git clone`.
 
-### 2. Núcleo web + QR Code da churrasqueira — porta 8000
+### 2. Sistema principal e churrasqueira por QR Code — porta 8000
 
-No terminal do VS Code, a partir da **raiz do repositório**:
+Em um terminal **na raiz `BovinusHackathon`**:
 
 ```powershell
-cd modulos\nucleo-web
+cd Bovinus
 python -m pip install -r requirements.txt
-python -m uvicorn app:app --port 8000
+python -m uvicorn app:app --host 127.0.0.1 --port 8000
 ```
 
-| Página | URL |
+| Página | Endereço local |
 |---|---|
-| Inicial / SmartScale inicial | http://127.0.0.1:8000/ |
-| Cliente — churrasqueira | http://127.0.0.1:8000/churrasqueira |
-| Painel — churrasqueira | http://127.0.0.1:8000/churrasqueira/painel |
-| Gerador de QR Code | http://127.0.0.1:8000/churrasqueira/qr |
-| Simulador do almoço | http://127.0.0.1:8000/simulador |
+| Inicial | http://127.0.0.1:8000/ |
+| QR Code da churrasqueira | http://127.0.0.1:8000/churrasqueira/qr |
+| Pedido do cliente | http://127.0.0.1:8000/churrasqueira |
+| Painel da equipe | http://127.0.0.1:8000/churrasqueira/painel |
+| Simulador | http://127.0.0.1:8000/simulador |
 
-**Demonstração sugerida:** comanda `1579` → escolher dois cortes → confirmar → abrir painel → conferir pedido e status. **PIN padrão de demonstração:** `2468` (não adequado para uso público).
+**Teste:** abra o pedido, informe a comanda, escolha mais de um corte, confirme e abra o painel da churrasqueira para consultar a solicitação. **PIN de demonstração:** `2468`.
 
-### 3. Tablet 3D + painel do salão — porta 8001
+> **QR Code no celular:** o endereço `127.0.0.1` funciona apenas no próprio computador. Para acessar de outro dispositivo na mesma rede Wi-Fi, execute o servidor com `--host 0.0.0.0`, descubra o IP local do computador com `ipconfig` e gere o QR Code com `http://IP_DO_COMPUTADOR:8000/churrasqueira`. Confira a permissão do firewall. **Não exponha o painel com PIN de demonstração à internet pública.**
 
-**Abra um novo terminal** e, a partir da raiz do repositório:
+### 3. Tablet 3D e painel do salão — porta 8001
+
+**Abra um novo terminal na raiz do repositório** e execute:
 
 ```powershell
-cd modulos\tablet-3d
+cd tablet-3d
 python -m pip install -r requirements.txt
-python -m uvicorn app:app --port 8001
+python -m uvicorn app:app --host 127.0.0.1 --port 8001
 ```
 
-| Página | URL |
+| Página | Endereço local |
 |---|---|
-| Tablet 3D da mesa 12 | http://127.0.0.1:8001/tablet-3d?mesa=12 |
+| Tablet da mesa 12 | http://127.0.0.1:8001/tablet-3d?mesa=12 |
 | Painel do salão | http://127.0.0.1:8001/salao/painel |
 | Maquete | http://127.0.0.1:8001/maquete |
 
-**Teste rápido:** no tablet, solicitar **água** ou **guardanapos** → abrir o painel do salão → verificar o chamado → atualizar o atendimento. **PIN padrão de demonstração:** `2468`.
+**Teste:** faça um chamado ou peça uma bebida no tablet e confira a solicitação no painel do salão. **PIN de demonstração:** `2468`.
 
-### 4. Balança inteligente + análise de custos — porta 8002
+### 4. Balança inteligente, câmera e CMV — porta 8002
 
-**Abra outro terminal** e, a partir da raiz do repositório:
+**Abra outro terminal na raiz do repositório** e execute:
 
 ```powershell
-cd modulos\balanca-ia
+cd balanca-ia
 python -m pip install -r requirements.txt
-python -m uvicorn app:app --port 8002
+python -m uvicorn app:app --host 127.0.0.1 --port 8002
 ```
 
-| Página | URL |
+| Página | Endereço local |
 |---|---|
-| Balança 3D funcional | http://127.0.0.1:8002/balanca-3d |
-| Painel de custos | http://127.0.0.1:8002/painel |
-| Saúde da API | http://127.0.0.1:8002/api/health |
+| Balança interativa | http://127.0.0.1:8002/balanca-3d |
+| Painel gerencial | http://127.0.0.1:8002/painel |
+| Estado da API | http://127.0.0.1:8002/api/health |
 
-**Sem API paga:** utilize os cenários demonstrativos identificados como **demo**, informe o peso manualmente, salve uma pesagem e observe o painel.
-
-**Para habilitar a análise visual por IA**, no PowerShell, **antes de iniciar o servidor**:
+Sem credencial de IA, use os **cenários de demonstração**. Para habilitar análise visual por API, antes de iniciar o servidor configure a variável de ambiente no terminal da balança:
 
 ```powershell
 $env:OPENAI_API_KEY="SUA_CHAVE_DE_API"
-# Opcional: $env:OPENAI_MODEL="gpt-4.1-mini"
-python -m uvicorn app:app --port 8002
+python -m uvicorn app:app --host 127.0.0.1 --port 8002
 ```
 
-> 🔐 Nunca publique a chave no GitHub, no frontend ou em capturas de tela. O acesso à API possui cobrança e credenciais próprias. **A webcam real é do dispositivo; o modelo 3D representa a posição do sensor e não substitui a câmera física.**
+**Não publique chaves no GitHub.** A câmera usa a webcam do dispositivo; o peso real continua sendo informado manualmente e os custos são estimados.
 
-### 5. Modelo final: só a balança e o prato 3D
+### 5. Visualizador 3D da balança e do prato — sem Python
 
-Abra diretamente este arquivo no Chrome/Edge:
+Abra o arquivo abaixo diretamente no Chrome ou Edge:
 
 ```text
-modulos/balanca-prato-3d/index.html
+Bovinus_Balanca_e_Prato_3D/index.html
 ```
 
-**Não precisa instalar pacotes, usar Python ou ligar um servidor.** Arraste para girar, use o zoom e escolha a vista superior para observar o prato. Essa versão é **exclusivamente visual** e não calcula CMV.
+Arraste para girar, use o zoom e o botão de vista superior. É um modelo visual, sem pesagem física ou cálculo automático de CMV.
 
-### 6. SmartQueue Cam — análise independente
+### 6. SmartQueue Cam — análise por vídeo/câmera
 
-O diretório `analise-fluxo` contém a documentação e o procedimento do experimento, **não a cópia dos scripts executáveis originais**. Para executar a ferramenta, coloque nessa pasta os arquivos originais `camera_queue.py` e `requirements_cam.txt` e instale as dependências documentadas:
+O código-fonte **já está disponível no repositório**. Abra um novo terminal na raiz e execute:
 
 ```powershell
-cd analise-fluxo
+cd Bovinus_SmartFlow_MVP/files
 python -m pip install -r requirements_cam.txt
 
-# Exemplo: calibrar a zona de análise com um vídeo autorizado
+# Calibrar a região da fila no vídeo:
 python camera_queue.py --source fila.mp4 --calibrar fila
 
-# Exemplo: executar a contagem
+# Analisar a região calibrada e exibir a detecção:
 python camera_queue.py --source fila.mp4 --mostrar --vazao-padrao 2 --modelo yolov8s.pt --imgsz 960 --conf 0.25 --fps 3
 ```
 
-O resultado do código original é registrado em `fila_camera.csv`. **Não é necessário executar a câmera para demonstrar o QR Code, o tablet ou a balança.**
+Se necessário, use `--source 0` para a webcam. O resultado é salvo em `fila_camera.csv`. Esta frente foi usada **para análise do fluxo**, sem integração obrigatória com os demais módulos. Utilize apenas vídeos com autorização e não apresente dados de teste como medições da Bovinu's.
 
-### 7. Testes automatizados
+### 7. Executar os testes do MVP
 
-Instale bibliotecas usadas nos testes, se ainda não estiverem disponíveis:
+Instale `httpx` e `pytest` se necessário. Em um terminal na raiz do repositório:
 
 ```powershell
 python -m pip install httpx pytest
-```
 
-Nos respectivos diretórios, execute:
-
-```powershell
-# modulos\nucleo-web
+cd Bovinus
 python teste_churrasqueira.py
 python teste_selecao_multipla.py
 
-# modulos\tablet-3d
+cd ..\tablet-3d
 python teste_tablet_independente.py
 
-# modulos\balanca-ia
+cd ..\balanca-ia
 python -m pytest teste_balanca.py -q
 ```
 
-Os testes verificam fluxos e regras do MVP, **não substituem** um piloto no restaurante, testes de ergonomia, segurança ou aferição da precisão da IA.
+Os testes exercitam o MVP; não comprovam desempenho, precisão da IA ou redução de filas no restaurante.
 
-### Problemas comuns
+### 8. Problemas comuns
 
-| Situação | Como resolver |
+| Problema | Solução |
 |---|---|
-| `Could not import module "app"` | Abra o terminal na pasta do **módulo correto**, não na raiz |
-| `requirements.txt` não encontrado | Use `dir` para conferir a pasta e depois `cd` até onde está o arquivo |
-| A URL não abre | Confirme se o servidor continua ligado e se a porta indicada está livre |
-| A webcam não abre | Autorize a câmera no navegador e teste em `localhost`; feche outros apps usando a webcam |
-| Tela 3D não aparece | Atualize Chrome/Edge; teste outra máquina ou renderização compatível |
-| IA visual não analisa foto | Confira `OPENAI_API_KEY` e as permissões da API; use demo se não houver chave |
-| Painel não recebe o pedido | Confirme que o **mesmo servidor** atende página do cliente e painel; observe o terminal |
-| PIN não funciona | Utilize o PIN de demonstração ou configure as variáveis de ambiente correspondentes |
+| `Could not import module "app"` | Entre na pasta do módulo (`Bovinus`, `tablet-3d` ou `balanca-ia`) antes de executar Uvicorn. |
+| `requirements.txt` não encontrado | Verifique o diretório com `pwd` e `dir`. |
+| URL local não abre | Confira se o processo do Uvicorn permanece ativo e se a porta está correta. |
+| QR Code não abre no celular | Use o IP local do computador em vez de `127.0.0.1`, servidor em `0.0.0.0` e mesma rede Wi-Fi. |
+| Webcam sem imagem | Autorize a câmera no navegador e feche outros programas que a utilizem. |
+| SmartScale sem análise por IA | Configure a API no servidor ou use o modo de demonstração. |
+| 3D não aparece | Verifique WebGL e a aceleração gráfica do navegador; tente Chrome ou Edge atualizado. |
 
 ---
 
