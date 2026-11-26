@@ -100,7 +100,7 @@ As rotinas de exemplo permitiram demonstrar conceitos mesmo sem dados histórico
 
 O trabalho foi expandido com:
 
-- **SmartQueue Predict:** modelo hipotético de chegadas e capacidade em intervalos de cinco minutos, ajustável por número de atendentes e tempo de serviço.
+- **SmartCam Predict:** modelo hipotético de chegadas e capacidade em intervalos de cinco minutos, ajustável por número de atendentes e tempo de serviço.
 - **SmartBuffet:** estimativa condicional de consumo de categorias e risco de redução do nível de cubas, usando valores iniciais e participações informadas manualmente.
 - **Maquete 3D da Augusta:** reconstrução conceitual do espaço a partir da planta apresentada, com áreas como churrasqueira, balanças, buffet e salões.
 - **Hotspots:** visualização ilustrativa de áreas mais críticas durante o pico.
