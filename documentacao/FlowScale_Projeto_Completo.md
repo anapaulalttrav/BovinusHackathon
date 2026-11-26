@@ -144,7 +144,7 @@ A aparência do equipamento passou por diversas revisões em resposta aos testes
 
 O modelo visual final inclui **louça com volume, carne grelhada, arroz, feijão, folhas, tomate e pepino**, com comandos para girar, aproximar e observar o prato por cima. Esse **visualizador final é independente e não realiza pesagem nem análise de IA**; tais funções permanecem no protótipo funcional separado.
 
-### Etapa 7 — SmartQueue Cam: investigação por câmera
+### Etapa 7 — Smart Cam: investigação por câmera
 
 Foi desenvolvido, separadamente, um programa Python que usa **YOLO** para detectar e contar pessoas em uma zona demarcada em vídeo ou câmera, com cálculo de espera estimada a partir de uma vazão informada ou observada.
 
@@ -229,7 +229,7 @@ O uso de portas separadas facilita abrir várias janelas ao mesmo tempo. **Cada 
 
 **Principais arquivos do núcleo:** `grill.py`, `churrasqueira_cliente.html`, `churrasqueira_painel.html`, `churrasqueira_qr.html`, `app.py`, `requirements.txt` e testes de pedidos.
 
-### 5.2 SmartQueue Cam — estudo de concentração de pessoas
+### 5.2 Smart Cam — estudo de concentração de pessoas
 
 **Problema abordado:** entender em quais pontos a fila cresce e onde o movimento se concentra.
 
