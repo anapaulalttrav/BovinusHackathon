@@ -564,67 +564,8 @@ A melhoria só poderá ser afirmada com **método de medição, amostra, períod
 
 ---
 
-## 11. Apresentação final da solução — vídeo prático de 2 minutos
 
-**Objetivo do vídeo:** demonstrar o que foi construído para a seleção da segunda fase, com gravações reais das telas e interações. Não é uma apresentação de slides nem um relatório de impacto já comprovado.
-
-### Roteiro de gravação e narração
-
-#### 00:00–00:12 | Abertura
-
-**Imagem:** nome FlowScale, tela inicial do projeto e breve transição para o sistema.
-
-**Narração:**
-
-> “Este é o FlowScale, nosso projeto desenvolvido para a Bovinu's Augusta. Criamos protótipos tecnológicos para melhorar o atendimento, analisar o fluxo de pessoas e compreender os custos alimentares.”
-
-#### 00:12–00:47 | QR Code da churrasqueira
-
-**Imagem:** ler o QR, preencher a comanda `1579`, escolher mais de um corte, confirmar e mostrar o pedido no painel da equipe.
-
-**Narração:**
-
-> “Começando pela churrasqueira, desenvolvemos um sistema de solicitações por QR Code. O cliente informa o número da comanda, escolhe os cortes de carne e seleciona o ponto desejado. Ao confirmar, a solicitação aparece automaticamente no painel da churrasqueira, identificada pela comanda. A equipe consegue visualizar, acompanhar e concluir o atendimento, sem modificar o processo de preparo das carnes.”
-
-#### 00:47–01:07 | Câmera utilizada para análise do fluxo
-
-**Imagem:** vídeo do SmartQueue Cam com detecção de pessoas e contagem na área marcada.
-
-**Narração:**
-
-> “Também utilizamos inteligência artificial e visão computacional para analisar o fluxo de pessoas. Desenvolvemos um sistema que detecta e conta pessoas por câmera, com o objetivo de identificar os locais de maior concentração e compreender onde surgem os principais pontos de congestionamento.”
-
-**Observação:** mostrar apenas a **análise independente**; não afirmar que a câmera está conectada à maquete ou ao atendimento ao vivo.
-
-#### 01:07–01:32 | Balança inteligente 3D
-
-**Imagem:** girar o modelo, mostrar a plataforma, o prato, os alimentos e a posição conceitual da câmera; se desejado, fazer um corte rápido para o cálculo ilustrativo do módulo funcional.
-
-**Narração:**
-
-> “Para analisar o consumo, criamos um protótipo de balança inteligente em 3D, com câmera direcionada para o prato. Demonstramos como a análise visual dos alimentos, combinada ao peso, pode ajudar a estimar a composição do prato e identificar os ingredientes que mais impactam o custo alimentar.”
-
-#### 01:32–01:54 | Tablet 3D
-
-**Imagem:** girar o tablet, fazer uma solicitação de bebida ou atendimento e mostrar a chegada no painel do salão.
-
-**Narração:**
-
-> “Para o atendimento nas mesas, desenvolvemos um tablet 3D interativo. O cliente pode pedir bebidas, solicitar um garçom, pedir talheres, guardanapos ou limpeza e avaliar o serviço. As solicitações são enviadas ao painel da equipe, que acompanha e finaliza cada atendimento.”
-
-#### 01:54–02:00 | Encerramento
-
-**Imagem:** montagem curta dos protótipos e nome FlowScale.
-
-**Narração:**
-
-> “Esse é o FlowScale: tecnologia aplicada à experiência do cliente, com protótipos desenvolvidos e prontos para validação na Bovinu's.”
-
-**Orientação de edição:** utilizar capturas dos protótipos de verdade, mostrando cliques, registros e mudanças de estado. Cortar tempos de carregamento, manter títulos mínimos e verificar o tempo final da voz gravada; os blocos de tempo são um guia de montagem.
-
----
-
-## 12. Diferenciais e conclusão
+## 11. Diferenciais e conclusão
 
 O **FlowScale** se diferencia por reunir frentes complementares a partir de um diagnóstico de jornada, em vez de depender apenas de uma ideia abstrata:
 
@@ -640,7 +581,7 @@ O **FlowScale** se diferencia por reunir frentes complementares a partir de um d
 
 ---
 
-## 13. Referências internas dos entregáveis
+## 12. Referências internas dos entregáveis
 
 Documentos e arquivos usados na consolidação desta documentação, produzidos no desenvolvimento do Hackathon:
 
