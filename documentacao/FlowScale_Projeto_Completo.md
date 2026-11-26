@@ -20,7 +20,7 @@ O trabalho partiu do estudo do desafio do restaurante, das observações apresen
 | Frente | Entrega desenvolvida | Papel na solução |
 |---|---|---|
 | **Churrasqueira por QR Code** | Interface do cliente, seleção de múltiplos cortes, identificação por comanda, painel da churrasqueira e acompanhamento de status | Organizar as solicitações e reduzir etapas de escolha no atendimento presencial |
-| **SmartQueue Cam** | Detecção e contagem de pessoas com YOLO em vídeo/câmera e estimativa de espera | **Análise do problema:** identificar locais de maior concentração e compreender os fluxos; não foi integrado aos demais módulos |
+| **Smart Cam** | Detecção e contagem de pessoas com YOLO em vídeo/câmera e estimativa de espera | **Análise do problema:** identificar locais de maior concentração e compreender os fluxos; não foi integrado aos demais módulos |
 | **SmartScale / Balança inteligente** | Protótipo de análise visual de alimentos, estimativa de composição, cálculos de custo/CMV, painel e modelos tridimensionais da balança e do prato | Explorar a geração de informações de consumo e o impacto dos alimentos no custo |
 | **Tablet 3D** | Tablet tridimensional interativo, pedidos de atendimento e bebidas, feedback e painel de equipe | Facilitar as solicitações dos clientes nas mesas |
 | **Simulador e maquete da Augusta** | Projeções hipotéticas de fila e consumo, alertas de cubas, hotspots e representação 3D conceitual | Apoiar estudos de cenários e a demonstração visual do funcionamento da casa |
